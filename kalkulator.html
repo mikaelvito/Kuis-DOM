@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kalkulator</title>
+</head>
+<body>
+    <label>Alas Segitiga</label>
+    <input type="number" class="alas-segitiga">
+
+    <br>
+    <br>
+
+    <label>Tinggi Segitiga</label>
+    <input type="number" class="tinggi-segitiga">
+
+    <br>
+    <br>
+
+    <button class="tombol-luas-segitiga">Luas Segitiga</button>
+    <button class="tombol-keliling-segitiga">Keliling Segitiga</button>
+
+    <p class="hasil"></p>
+
+    <script>
+        const elementAlasSegitiga = document.querySelector('.alas-segitiga');
+        const elementTinggiSegitiga = document.querySelector('.tinggi-segitiga');
+
+        const elementTombolLuasSegitiga = document.querySelector('.tombol-luas-segitiga');
+        const elementTombolKelilingSegitiga = document.querySelector('.tombol-keliling-segitiga');
+
+        const elementHasil = document.querySelector('.hasil');
+
+        elementTombolLuasSegitiga.addEventListener('click', function () {
+            const nilaiAlasSegitiga = Number(elementAlasSegitiga.value);
+            const nilaiTinggiSegitiga = Number(elementTinggiSegitiga.value);
+            const hasil = 1/2 * nilaiAlasSegitiga * nilaiTinggiSegitiga;
+            elementHasil.textContent = `Hasilnya adalah = ${hasil}`;
+        });
+
+        elementTombolKelilingSegitiga.addEventListener('click', function () {
+            const nilaiAlasSegitiga = Number(elementAlasSegitiga.value);
+            const nilaiTinggiSegitiga = Number(elementTinggiSegitiga.value);
+            const hasil = nilaiAlasSegitiga + nilaiAlasSegitiga + nilaiAlasSegitiga;
+            elementHasil.textContent = `Hasilnya adalah = ${hasil}`;
+        });
+    </script>
+</body>
+</html>
